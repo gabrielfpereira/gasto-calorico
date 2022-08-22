@@ -41,7 +41,7 @@ export default function Calculadora (){
             <div className={styles.form}>
             <div className={styles.formGroup}>
                 <label>Sexo</label>
-                <select name='sexo' onChange={(item) => setSexo(item.target.value)}>
+                <select className={styles.selects} name='sexo' onChange={(item) => setSexo(item.target.value)}>
                     <option value={"Masculino"} defaultValue>Masculino</option>
                     <option value={"Feminino"}>Feminino</option>
                 </select>
@@ -49,22 +49,22 @@ export default function Calculadora (){
 
             <div className={styles.formGroup}>
                 <label>Idade</label>
-                <input name='idade' type={"number"} onChange={(item) => setIdade(item.target.value)}/>
+                <input className={styles.inputs} name='idade' type={"number"} onChange={(item) => setIdade(item.target.value)}/>
             </div>
 
             <div className={styles.formGroup}>
                 <label>Peso em quilos</label>
-                <input name='peso' type={"number"} onChange={(item) => setPeso(item.target.value)} />
+                <input className={styles.inputs} name='peso' type={"number"} onChange={(item) => setPeso(item.target.value)} />
             </div>
 
             <div className={styles.formGroup}>
                 <label>Altura em centímetros</label>
-                <input name='altura' type={"number"} onChange={(item) => setAltura(item.target.value)} />
+                <input className={styles.inputs} name='altura' type={"number"} onChange={(item) => setAltura(item.target.value)} />
             </div>
 
             <div className={styles.formGroup}>
                 <label>Atividade Física</label>
-                <select name='atividade' onChange={(item) => setAtividade(item.target.value)}>
+                <select className={styles.selects} name='atividade' onChange={(item) => setAtividade(item.target.value)}>
                     <option value={"Sedentario"} defaultValue>Sedentário</option>
                     <option value={"Ativo"}>Ativo - 3x por semana</option>
                 </select>
@@ -75,11 +75,11 @@ export default function Calculadora (){
 
             <h1>Gasto Calórico: {gasto.toFixed(2)}</h1>
 
-            <h2>Para perder 0,5 kg por semana você deve consumir: {(gasto - 500).toFixed(2)} kcal por dia</h2>
-            <h2>Para perder 1 kg por semana você deve consumir: {(gasto - 1000).toFixed(2)} kcal por dia</h2>
+            <h2 className={styles.infos}>Para perder 0,5 kg por semana você deve consumir: {(gasto - 500).toFixed(2)} kcal por dia</h2>
+            <h2 className={styles.infos}>Para perder 1 kg por semana você deve consumir: {(gasto - 1000).toFixed(2)} kcal por dia</h2>
 
-            <h2>Para ganhar 0,5 kg por semana você deve consumir: {(gasto + 500).toFixed(2)} kcal por dia</h2>
-            <h2>Para ganhar 1 kg por semana você deve consumir: {(gasto + 1000).toFixed(2)} kcal por dia</h2>
+            <h2 className={styles.infos}>Para ganhar 0,5 kg por semana você deve consumir: {(gasto + 500).toFixed(2)} kcal por dia</h2>
+            <h2 className={styles.infos}>Para ganhar 1 kg por semana você deve consumir: {(gasto + 1000).toFixed(2)} kcal por dia</h2>
         </div>
     )
 }

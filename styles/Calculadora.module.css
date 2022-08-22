@@ -43,3 +43,19 @@
   .formGroup input, .formGroup select {
     margin-left: 10px;
   }
+
+  .selects{
+    font-size: 1.1rem;
+    padding: 3px;
+  }
+
+  .inputs{
+    font-size: 1.1rem;
+    width: 150px;
+    padding: 5px;
+  }
+
+  .infos{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
