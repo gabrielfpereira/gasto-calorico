@@ -1,0 +1,36 @@
+.main {
+    min-height: 100vh;
+    padding: 4rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.refeicao{
+    background-color: azure;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 2px;
+}
+
+.refeicao p{
+    margin: 0;
+    padding-top: 5px;
+}
+
+.refeicao h3{
+    margin: 0;
+}
+
+.refeicao input{
+    width: 50px;
+}
+
+.boxRefeicoes{
+    max-width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
