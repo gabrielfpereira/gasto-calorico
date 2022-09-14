@@ -56,7 +56,7 @@ export default function Refeicoes(){
 
     useEffect(()=>{
         calcularKcal()
-    },[refeicao, edit])
+    },[refeicao, edit, calcularKcal])
 
     return (
         <div className={styles.main}>
