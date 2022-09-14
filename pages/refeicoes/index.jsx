@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import styles from '../../styles/Refeicoes.module.css'
 
-import { alimentos } from './caloriasAlimentos'
+import { alimentos } from '../../components/refeicoes/caloriasAlimentos'
 
 export default function Refeicoes(){
     const [refeicao, setRefeicao] = useState([])
