@@ -3,7 +3,7 @@ import styles from '../../styles/Refeicoes.module.css'
 
 import { alimentos } from './caloriasAlimentos'
 
-export default function refeicoes(){
+export default function Refeicoes(){
     const [refeicao, setRefeicao] = useState([])
     const [totalKcal, setTotalKcal] = useState(0)
     const [edit, setEdit] = useState(null)
