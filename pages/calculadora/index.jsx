@@ -48,12 +48,14 @@ export default function Calculadora (){
                         src={ require('../imgs/boy.svg')}
                         width={50}
                         height={50}
+                        alt="imagem"
                     />
 
                     <Image 
                         src={ require('../imgs/girl.svg')}
                         width={50}
                         height={50}
+                        alt="imagem"
                     />
                 </div>
                 <label>Qual o seu Sexo?</label>
@@ -72,6 +74,7 @@ export default function Calculadora (){
                         src={ require('../imgs/calendario.svg')}
                         width={50}
                         height={50}
+                        alt="imagem"
                     />
 
                 </div>
@@ -88,6 +91,7 @@ export default function Calculadora (){
                         src={ require('../imgs/balanca.svg')}
                         width={50}
                         height={50}
+                        alt="imagem"
                     />
                 </div>
                 <label>Qual é o seu Peso?</label>
@@ -103,6 +107,7 @@ export default function Calculadora (){
                         src={ require('../imgs/altura.svg')}
                         width={50}
                         height={50}
+                        alt="imagem"
                     />
                 </div>
                 <label>Qual a sua altura?</label>
