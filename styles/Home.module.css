@@ -139,24 +139,39 @@ justify-content: center;
 align-items: flex-start;
 }
 
+.hero::after{
+  content: '';
+  width: 50%;
+  height: 90%;
+  position: absolute;
+  background: rgb(0,0,0);
+  background: linear-gradient(87deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+}
+
 .hero .title{
   color: #eaeaea;
   margin-left: 3rem;
+  z-index: 99;
 }
 
 .hero .subtitle{
   color: #eaeaea;
   margin-left: 3rem;
+  z-index: 99;
 }
 
 .hero .button{
   margin-left: 3rem;
+  z-index: 99;
 }
 
 @media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+  .hero{
+    align-items: center;
+  }
+
+  .hero::after{
+    width: 100vw;
   }
 }
 
