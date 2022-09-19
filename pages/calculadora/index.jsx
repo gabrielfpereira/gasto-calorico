@@ -1,5 +1,6 @@
 import { useState } from  'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import styles from '../../styles/Calculadora.module.css'
 
@@ -42,95 +43,96 @@ export default function Calculadora (){
             <p>Precisamos de algumas dados seu para que possamos fazer o calculo para você</p>
 
             <div className={styles.form}>
-            <div className={styles.formGroup}>
-                <div className={styles.boxImages}>
-                    <Image 
-                        src={ require('../imgs/boy.svg')}
-                        width={50}
-                        height={50}
-                        alt="imagem"
-                    />
+                <div className={styles.formGroup}>
+                    <div className={styles.boxImages}>
+                        <Image 
+                            src={ require('../imgs/boy.svg')}
+                            width={50}
+                            height={50}
+                            alt="imagem"
+                        />
 
-                    <Image 
-                        src={ require('../imgs/girl.svg')}
-                        width={50}
-                        height={50}
-                        alt="imagem"
-                    />
+                        <Image 
+                            src={ require('../imgs/girl.svg')}
+                            width={50}
+                            height={50}
+                            alt="imagem"
+                        />
+                    </div>
+                    <label>Qual o seu Sexo?</label>
+                    
+                    <div className={styles.boxInput}>
+                        <select className={styles.selects} name='sexo' onChange={(item) => setSexo(item.target.value)}>
+                            <option value={"Masculino"} defaultValue>Masculino</option>
+                            <option value={"Feminino"}>Feminino</option>
+                        </select>
+                    </div>
                 </div>
-                <label>Qual o seu Sexo?</label>
-                
-                <div className={styles.boxInput}>
-                    <select className={styles.selects} name='sexo' onChange={(item) => setSexo(item.target.value)}>
-                        <option value={"Masculino"} defaultValue>Masculino</option>
-                        <option value={"Feminino"}>Feminino</option>
+
+                <div className={styles.formGroup}>
+                    <div className={styles.boxImages}>
+                        <Image 
+                            src={ require('../imgs/calendario.svg')}
+                            width={50}
+                            height={50}
+                            alt="imagem"
+                        />
+
+                    </div>
+                    <label>Qual é a sua Idade?</label>
+                    <div className={styles.boxInput}>
+                        <input className={styles.inputs} name='idade' type={"number"} onChange={(item) => setIdade(item.target.value)}/>
+                        <span>anos</span>
+                    </div>
+                </div>
+
+                <div className={styles.formGroup}>
+                    <div className={styles.boxImages}>
+                        <Image 
+                            src={ require('../imgs/balanca.svg')}
+                            width={50}
+                            height={50}
+                            alt="imagem"
+                        />
+                    </div>
+                    <label>Qual é o seu Peso?</label>
+                    <div className={styles.boxInput}>
+                        <input className={styles.inputs} name='peso' type={"number"} onChange={(item) => setPeso(item.target.value)} />
+                        <span>kg</span>
+                    </div>
+                </div>
+
+                <div className={styles.formGroup}>
+                    <div className={styles.boxImages}>
+                        <Image 
+                            src={ require('../imgs/altura.svg')}
+                            width={50}
+                            height={50}
+                            alt="imagem"
+                        />
+                    </div>
+                    <label>Qual a sua altura?</label>
+
+                    <div className={styles.boxInput}>
+                        <input className={styles.inputs} name='altura' type={"number"} onChange={(item) => setAltura(item.target.value)} />
+                        <span>cm</span>
+                    </div>
+                </div>
+
+                <div className={styles.formGroup}>
+                    <label>Atividade Física</label>
+                    <select className={styles.atividade_fisica} name='atividade' onChange={(item) => setAtividade(item.target.value)}>
+                        <option value={"Sedentario"} defaultValue>Sedentário</option>
+                        <option value={"Ativo"}>Ativo - 3x por semana</option>
                     </select>
                 </div>
-            </div>
-
-            <div className={styles.formGroup}>
-                <div className={styles.boxImages}>
-                    <Image 
-                        src={ require('../imgs/calendario.svg')}
-                        width={50}
-                        height={50}
-                        alt="imagem"
-                    />
-
-                </div>
-                <label>Qual é a sua Idade?</label>
-                <div className={styles.boxInput}>
-                    <input className={styles.inputs} name='idade' type={"number"} onChange={(item) => setIdade(item.target.value)}/>
-                    <span>anos</span>
-                </div>
-            </div>
-
-            <div className={styles.formGroup}>
-                <div className={styles.boxImages}>
-                    <Image 
-                        src={ require('../imgs/balanca.svg')}
-                        width={50}
-                        height={50}
-                        alt="imagem"
-                    />
-                </div>
-                <label>Qual é o seu Peso?</label>
-                <div className={styles.boxInput}>
-                    <input className={styles.inputs} name='peso' type={"number"} onChange={(item) => setPeso(item.target.value)} />
-                    <span>kg</span>
-                </div>
-            </div>
-
-            <div className={styles.formGroup}>
-                <div className={styles.boxImages}>
-                    <Image 
-                        src={ require('../imgs/altura.svg')}
-                        width={50}
-                        height={50}
-                        alt="imagem"
-                    />
-                </div>
-                <label>Qual a sua altura?</label>
-
-                <div className={styles.boxInput}>
-                    <input className={styles.inputs} name='altura' type={"number"} onChange={(item) => setAltura(item.target.value)} />
-                    <span>cm</span>
-                </div>
-            </div>
-
-            <div className={styles.formGroup}>
-                <label>Atividade Física</label>
-                <select className={styles.selects} name='atividade' onChange={(item) => setAtividade(item.target.value)}>
-                    <option value={"Sedentario"} defaultValue>Sedentário</option>
-                    <option value={"Ativo"}>Ativo - 3x por semana</option>
-                </select>
-            </div>
             </div>
 
             <button className={styles.button} onClick={calcular}>Calcular</button>
 
             <h1>Gasto Calórico: {gasto.toFixed(2)}</h1>
 
+                <Link href={'./refeicoes'}><a className={styles.button}>Montar Refeição</a></Link>
             <div className={styles.boxResultados}>
                 <div className={styles.resultados}>
                     <span>Para perder</span>
