@@ -4,7 +4,7 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding:  0 0 4rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -128,10 +128,29 @@
 }
 
 .hero{
-background-image: url('../public/img/hero.jpg');
+background: url("../public/fitness-hero.jpg");
+background-repeat: no-repeat;
+background-size: cover;
 width: 100vw;
-height: 100%;
+height: 90vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+}
 
+.hero .title{
+  color: #eaeaea;
+  margin-left: 3rem;
+}
+
+.hero .subtitle{
+  color: #eaeaea;
+  margin-left: 3rem;
+}
+
+.hero .button{
+  margin-left: 3rem;
 }
 
 @media (max-width: 600px) {

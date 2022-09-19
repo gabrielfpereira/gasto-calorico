@@ -18,13 +18,13 @@ export default function Home() {
             Gasto Calórico
           </h1>
 
+          <h2 className={styles.subtitle}>Perca peso e se alimente de maneira saudável</h2>
+          <Link href='/calculadora'>
+            <a  className={styles.button}>Calculadora</a>
+          </Link>
         </div>
 
-        <Link href='/calculadora'>
-          <a  className={styles.button}>Calculadora</a>
-        </Link>
 
-        <h2 className={styles.subtitle}>Perca peso e se alimente de maneira saudável</h2>
         <h2 className={styles.subtitle}>Quantas calorias preciso consumir por dia?</h2>
         <p>O ganho de peso está diretamente associado à diferença entre a ingestão e o gasto de calorias ao longo dos dias. Emagrecer ou engordar é resultado de uma simples matemática. Se o indivíduo engorda é porque está ingerindo mais calorias do que gasta; se mantém o peso estável é porque ingere uma quantidade de calorias semelhantes ao seu gasto diário; se emagrece é porque está queimando mais calorias do que ingere. É simples assim, não existe outra explicação para perda ou ganho de peso.</p>
       </main>
