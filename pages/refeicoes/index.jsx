@@ -42,15 +42,15 @@ export default function Refeicoes(){
         setTotalKcal(total)
     }
 
-    function setCaloria(gramas, index){
-        const alimento = refeicao.find( (item, i) => i == index)
-        const data = [...refeicao]
+    function calcularCalorias(gramas, nomeAlimento){
+        const alimento = service.find(nomeAlimento)
+        const duplication = [...refeicao]
 
-        alimento.gramas = parseInt(gramas)
+        const alimentoAlterar = duplication.find( (item) => item.nome == nomeAlimento)
 
-        data[index] = alimento
+        alimentoAlterar.calorias = (gramas * alimento.calorias) / 100
 
-        setRefeicao([...data])
+        setRefeicao([...refeicao, alimentoAlterar])
     }
 
     useEffect(()=>{
@@ -61,20 +61,23 @@ export default function Refeicoes(){
     return (
         <div className={styles.main}>
             <h1>Monte suas Refeições</h1>
-            <h3>Refeição: </h3>
+
+            <p>Selecione na lista os alimentos da sua refeição.</p>
             <div className={styles.boxRefeicoes}>
                 {refeicao && refeicao.map( (item, index) => (
                     <div className={styles.refeicao} key={index}>
                         <h3 key={index}> { item.nome}</h3>
                         <p> 
-                            {item.gramas}g / {converterEmColher(item.gramas)} colheres
+                            {item.gramas}g / {converterEmColher(item.gramas)} col / {item.calorias} Kcal
                         </p>
                     </div>
                 ))}
             </div>
-            <p>Total calorias: {totalKcal}kcal</p>
+            <h2 className={styles.subtitle}>Total calorias: {totalKcal}kcal</h2>
+            <span className={styles.text}>Esse é o total de calorias da refeição que você montou.</span>
             
-            <div>
+            <div className={styles.lista_alimentos}>
+                <p>Lista de Alimentos:</p>
                 { alimentos.map( (item, index) => (
                     <div className={styles.alimentoGroup} key={index}>
                         <input type="checkbox" name="alimento" id={item.nome} value={item.nome} onChange={(item) => addAlimento(item.target)} />
