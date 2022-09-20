@@ -20,9 +20,9 @@ export default function Refeicoes(){
         const data = refeicao.findIndex( item => item.nome == alimento.nome)
         console.log("data: " + data)
         if(data != -1){
-            refeicao.splice(data,1)
-            console.log(refeicao)
-            setRefeicao(refeicao)
+            let duplication = [...refeicao]
+            duplication.splice(data,1)
+            setRefeicao(duplication)
 
         }else{
             setRefeicao([...refeicao, alimento])
@@ -63,7 +63,7 @@ export default function Refeicoes(){
             <h1>Monte suas Refeições</h1>
             <h3>Refeição: </h3>
             <div className={styles.boxRefeicoes}>
-                {refeicao.map( (item, index) => (
+                {refeicao && refeicao.map( (item, index) => (
                     <div className={styles.refeicao} key={index}>
                         <h3 key={index}> { item.nome}</h3>
                         <p> 
