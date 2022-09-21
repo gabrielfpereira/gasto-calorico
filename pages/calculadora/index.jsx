@@ -31,8 +31,11 @@ export default function Calculadora (){
             if(atividade == 'Sedentario'){
                 console.log(TBM * 1.2)
                 setGasto(TBM * 1.2)
-            }else{
+            }else if(atividade == 'Ativo3x'){
                 console.log(TBM * 1.375)
+                setGasto(TBM * 1.375)
+            }else if(atividade == 'Ativo5x'){
+                console.log(TBM * 1.55)
                 setGasto(TBM * 1.375)
             }
         }
@@ -123,7 +126,8 @@ export default function Calculadora (){
                     <label>Atividade Física</label>
                     <select className={styles.atividade_fisica} name='atividade' onChange={(item) => setAtividade(item.target.value)}>
                         <option value={"Sedentario"} defaultValue>Sedentário</option>
-                        <option value={"Ativo"}>Ativo - 3x por semana</option>
+                        <option value={"Ativo3x"}>Ativo - 3x por semana</option>
+                        <option value={"Ativo5x"}>Ativo - 5x por semana</option>
                     </select>
                 </div>
             </div>
