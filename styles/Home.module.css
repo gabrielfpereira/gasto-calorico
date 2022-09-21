@@ -173,6 +173,18 @@ align-items: flex-start;
   .hero::after{
     width: 100vw;
   }
+
+  .hero .title{
+    margin-left: 0;
+  }
+  
+  .hero .subtitle{
+    margin-left: 0;
+  }
+
+  .hero .button{
+    margin-left: 0;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

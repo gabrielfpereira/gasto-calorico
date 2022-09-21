@@ -60,7 +60,7 @@ export default function Refeicoes(){
 
     return (
         <div className={styles.main}>
-            <h1>Monte suas Refeições</h1>
+            <h1>Monte sua Refeição</h1>
 
             <p>Selecione na lista os alimentos da sua refeição.</p>
             <div className={styles.boxRefeicoes}>

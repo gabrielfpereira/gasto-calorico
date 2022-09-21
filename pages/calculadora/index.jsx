@@ -40,7 +40,7 @@ export default function Calculadora (){
     return (
         <div className={styles.main}>
             <h1 className={styles.title}> Calculadora de Gasto Calórico</h1>
-            <p>Precisamos de algumas dados seu para que possamos fazer o calculo para você</p>
+            <p>Precisamos de alguns dados para que possamos fazer o calculo para você</p>
 
             <div className={styles.form}>
                 <div className={styles.formGroup}>
@@ -130,12 +130,15 @@ export default function Calculadora (){
 
             <button className={styles.button} onClick={calcular}>Calcular</button>
 
-            <h1>Gasto Calórico: {gasto.toFixed(2)}</h1>
+            <div className={styles.infos_tmb}>
+                <h1>{gasto.toFixed(2)} Kcal</h1>
+                <span>Quantida de calorias necessárias por dia</span>
+            </div>
 
-                <Link href={'./refeicoes'}><a className={styles.button}>Montar Refeição</a></Link>
+            <Link href={'./refeicoes'}><a className={styles.button}>Montar Refeição</a></Link>
             <div className={styles.boxResultados}>
                 <div className={styles.resultados}>
-                    <span>Para perder</span>
+                    <span>Para <strong>perder</strong></span>
                     <h2 className={styles.infos}>0,5 kg</h2>
                     <span>por semana você deve consumir: </span>
                     <h2 className={styles.infos}>{(gasto - 500).toFixed(2)}</h2>
@@ -143,10 +146,26 @@ export default function Calculadora (){
                 </div>
 
                 <div className={styles.resultados}>
-                    <span>Para perder</span>
+                    <span>Para <strong>perder</strong></span>
                     <h2 className={styles.infos}>1 kg</h2>
                     <span>por semana você deve consumir: </span>
                     <h2 className={styles.infos}>{(gasto - 1000).toFixed(2)}</h2>
+                    <span>kcal por dia</span>
+                </div>
+
+                <div className={styles.resultados}>
+                    <span>Para <strong>ganhar</strong></span>
+                    <h2 className={styles.infos}>0,5 kg</h2>
+                    <span>por semana você deve consumir: </span>
+                    <h2 className={styles.infos}>{(gasto + 500).toFixed(2)}</h2>
+                    <span>kcal por dia</span>
+                </div>
+
+                <div className={styles.resultados}>
+                    <span>Para <strong>ganhar</strong></span>
+                    <h2 className={styles.infos}>1 kg</h2>
+                    <span>por semana você deve consumir: </span>
+                    <h2 className={styles.infos}>{(gasto + 1000).toFixed(2)}</h2>
                     <span>kcal por dia</span>
                 </div>
             </div>
