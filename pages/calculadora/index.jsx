@@ -144,6 +144,7 @@ export default function Calculadora (){
 
             <Link href={'./refeicoes'}><a className={styles.button}>Montar Refeição</a></Link>
             <div className={styles.boxResultados}>
+                <p className={styles.alerta}>O mínimo recomendado é 1200 kcal por dia</p>
                 <div className={styles.resultados}>
                     <span>Para <strong>perder</strong></span>
                     <h2 className={styles.infos}>0,5 kg</h2>

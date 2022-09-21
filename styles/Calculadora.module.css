@@ -134,6 +134,10 @@
     margin-bottom: 16px;
   }
 
+  .alerta{
+    color: red;
+  }
+
 @media(max-width: 600px){
   .form{
     display: flex;
