@@ -105,7 +105,7 @@ export const alimentos = [
         calorias: 52
     },
     {
-        nome: 'Macarrão com carne muida',
+        nome: 'Macarrão com carne moida',
         gramas: 290,
         calorias: 310
     },
