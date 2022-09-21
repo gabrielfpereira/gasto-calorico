@@ -19,9 +19,12 @@ export default function Calculadora (){
             if(atividade == 'Sedentario'){
                 console.log(TBM * 1.2)
                 setGasto(TBM * 1.2)
-            }else{
+            }else if(atividade == 'Ativo3x'){
                 console.log(TBM * 1.375)
                 setGasto(TBM * 1.375)
+            }else if(atividade == 'Ativo5x'){
+                console.log(TBM * 1.55)
+                setGasto(TBM * 1.55)
             }
         }
 
@@ -36,7 +39,7 @@ export default function Calculadora (){
                 setGasto(TBM * 1.375)
             }else if(atividade == 'Ativo5x'){
                 console.log(TBM * 1.55)
-                setGasto(TBM * 1.375)
+                setGasto(TBM * 1.55)
             }
         }
     }
